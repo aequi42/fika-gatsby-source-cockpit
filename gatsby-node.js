@@ -90,3 +90,5 @@ const updateAssetPathsWithLocalPaths = (markdown, assets) => {
     assets[match[1]]
       ? match[0].replace(match[1], assets[match[1]].localPath)
       : match[0]
+  )
+}
