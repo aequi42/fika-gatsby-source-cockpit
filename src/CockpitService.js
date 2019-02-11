@@ -1,4 +1,4 @@
-﻿const mime = require('mime')
+const mime = require('mime')
 const request = require('request-promise')
 const getFieldsOfTypes = require('./helpers.js').getFieldsOfTypes
 const slugify = require('slugify')
