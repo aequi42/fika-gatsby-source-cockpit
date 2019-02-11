@@ -1,4 +1,4 @@
-const mime = require('mime')
+﻿const mime = require('mime')
 const request = require('request-promise')
 const getFieldsOfTypes = require('./helpers.js').getFieldsOfTypes
 const slugify = require('slugify')
@@ -255,6 +255,13 @@ const createCollectionItem = (
 ) => {
   const item = {
     cockpitId: collectionEntry._id,
+    cockpitData:{
+      createdBy: collectionEntry._by,
+      modifiedBy: collectionEntry._mby,
+      created: new Date(collectionEntry._created*1000),
+      modified: new Date(collectionEntry._modified*1000),
+      id: collectionEntry._id
+    },
     lang: locale == null ? 'any' : locale,
     level: level,
   }
